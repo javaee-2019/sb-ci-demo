@@ -46,5 +46,18 @@
             </plugin>
         </plugins>
     </build>
-
+<!--    <distributionManagement>
+        &lt;!&ndash; 发布到快照版本的仓库，即测试版本仓库 &ndash;&gt;
+        <snapshotRepository>
+            <id>snapshots</id>
+            &lt;!&ndash;<url>http://www.shanmu2020.com:8081/nexus/content/repositories/snapshots</url>&ndash;&gt;
+            <url>http://www.shanmu2020.com:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        &lt;!&ndash; 发布到发行版本的仓库中，即正式版本仓库 &ndash;&gt;
+        <repository>
+            <id>releases</id>
+            &lt;!&ndash;<url>http://www.shanmu2020.com:8081/nexus/content/repositories/releases</url>&ndash;&gt;
+            <url>http://www.shanmu2020.com:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>-->
 </project>

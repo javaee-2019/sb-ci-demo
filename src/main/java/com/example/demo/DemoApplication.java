@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Date;
 
 @SpringBootApplication
@@ -15,16 +17,29 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
+    @RequestMapping("/")
+    public Object start() {
+        return hello();
+    }
+
     @RequestMapping("/hello")
     public Object hello() {
-        Integer num = 10;
-        num++;
-        return "hello " + num;
+        return getUrl() + "====>" + new Date().toLocaleString();
     }
 
     @RequestMapping("/time")
     public Object time() {
-        return new Date().toLocaleString();
+        return getUrl() + "====>" + new Date().toLocaleString();
     }
 
+
+    public String getUrl() {
+        InetAddress address = null;
+        try {
+            address = InetAddress.getLocalHost();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        return "http://" + address.getHostAddress();
+    }
 }
