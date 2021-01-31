@@ -29,12 +29,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- CXF webservice -->
         <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
-            <!--<version>3.1.7</version>--><!--针对springboot1.4.5.RELEASE-->
-            <version>3.2.5</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
         </dependency>
     </dependencies>
 
