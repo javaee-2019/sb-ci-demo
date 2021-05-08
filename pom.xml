@@ -29,12 +29,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- CXF webservice -->
         <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
-            <!--<version>3.1.7</version>--><!--针对springboot1.4.5.RELEASE-->
-            <version>3.2.5</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
         </dependency>
     </dependencies>
 
@@ -46,5 +44,18 @@
             </plugin>
         </plugins>
     </build>
-
+<!--    <distributionManagement>
+        &lt;!&ndash; 发布到快照版本的仓库，即测试版本仓库 &ndash;&gt;
+        <snapshotRepository>
+            <id>snapshots</id>
+            &lt;!&ndash;<url>http://www.shanmu2020.com:8081/nexus/content/repositories/snapshots</url>&ndash;&gt;
+            <url>http://www.shanmu2020.com:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        &lt;!&ndash; 发布到发行版本的仓库中，即正式版本仓库 &ndash;&gt;
+        <repository>
+            <id>releases</id>
+            &lt;!&ndash;<url>http://www.shanmu2020.com:8081/nexus/content/repositories/releases</url>&ndash;&gt;
+            <url>http://www.shanmu2020.com:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>-->
 </project>
